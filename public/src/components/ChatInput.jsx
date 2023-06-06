@@ -36,7 +36,7 @@ export default function ChatInput({ handleSendMsg }) {
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
           type="text"
-          placeholder="type your message here"
+          placeholder="Type your message here..."
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
@@ -52,7 +52,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: black;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -67,33 +67,36 @@ const Container = styled.div`
       position: relative;
       svg {
         font-size: 1.5rem;
-        color: #ffff00c8;
+        color:  beige;
         cursor: pointer;
       }
       .emoji-picker-react {
         position: absolute;
         top: -350px;
-        background-color: #080420;
-        box-shadow: 0 5px 10px #9a86f3;
-        border-color: #9a86f3;
+        background-color: #006666;
+        box-shadow: 0 5px 10px yellow;
+        border-color: limegreen;
         .emoji-scroll-wrapper::-webkit-scrollbar {
-          background-color: #080420;
+          background-color: #006666;
           width: 5px;
           &-thumb {
-            background-color: #9a86f3;
+            background-color: yellow;
           }
         }
         .emoji-categories {
           button {
             filter: contrast(0);
+            color: black;
           }
         }
         .emoji-search {
           background-color: transparent;
-          border-color: #9a86f3;
+          color: black;
+          border-color: limegreen;
         }
         .emoji-group:before {
-          background-color: #080420;
+          background-color: #006666;
+          color: black;
         }
       }
     }
@@ -104,18 +107,18 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: #ffffff34;
+    background-color: beige;
     input {
       width: 90%;
       height: 60%;
       background-color: transparent;
-      color: white;
+      color: black;
       border: none;
       padding-left: 1rem;
       font-size: 1.2rem;
 
       &::selection {
-        background-color: #9a86f3;
+        background-color: black;
       }
       &:focus {
         outline: none;
@@ -127,7 +130,7 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #9a86f3;
+      background-color: #006666;
       border: none;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;
@@ -137,7 +140,7 @@ const Container = styled.div`
       }
       svg {
         font-size: 2rem;
-        color: white;
+        color: whitesmoke;
       }
     }
   }

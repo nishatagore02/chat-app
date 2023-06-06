@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/download.png";
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -23,7 +23,7 @@ export default function Contacts({ contacts, changeChat }) {
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <h3>F.R.I.E.N.D.S</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -80,6 +80,7 @@ const Container = styled.div`
     h3 {
       color: white;
       text-transform: uppercase;
+      text-shadow: 0 0 10px blue, 0 0 10px blue;
     }
   }
   .contacts {
@@ -91,13 +92,13 @@ const Container = styled.div`
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
-        background-color: #ffffff39;
+        background-color: #009999;
         width: 0.1rem;
         border-radius: 1rem;
       }
     }
     .contact {
-      background-color: #ffffff34;
+      background-color: #009999;
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -114,17 +115,17 @@ const Container = styled.div`
       }
       .username {
         h3 {
-          color: white;
+          color: black;
         }
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: beige;
     }
   }
 
   .current-user {
-    background-color: #0d0d30;
+    background-color:#b3ffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +138,7 @@ const Container = styled.div`
     }
     .username {
       h2 {
-        color: white;
+        color: black;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {
