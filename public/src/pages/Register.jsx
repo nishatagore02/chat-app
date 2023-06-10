@@ -28,7 +28,7 @@ export default function Register() {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]); // Add 'navigate' to the dependency array
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
@@ -128,6 +128,7 @@ export default function Register() {
     </>
   );
 }
+
 
 const FormContainer = styled.div`
   height: 100vh;
